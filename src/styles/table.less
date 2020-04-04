@@ -1,0 +1,61 @@
+.scroll-table-vertical {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.scroll-table-horizontal {
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.page-first-row {
+  height: 4%;
+}
+
+.page-second-row {
+  height: 94%;
+
+  .default-container {
+    height: 100%;
+    background-color: #fff;
+    padding: 0;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+  }
+
+  .table-with-card-active {
+    height: 70%;
+    background-color: #fff;
+    padding: 0;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+  }
+
+
+  .page-content {
+    background-color: #fff;
+    height: 100%;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+  }
+
+  .no-record-found {
+    text-align: center;
+    padding-top: 3%;
+    color: #0387c3;
+  }
+}
+
+table.table {
+  border: none !important;
+
+  .sticky-table-header {
+    th {
+      position: sticky;
+      top: 0;
+      background-color: #033A6A !important;
+      z-index: 1000;
+      padding: 9px;
+      &.add-button {
+        padding: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+::ng-deep text {
+  font: 15px sans-serif;
+  pointer-events: none;
+  fill: black;
+  font-weight: bold;
+}
+
+::ng-deep path.link {
+  fill: none;
+  stroke: #000;
+  stroke-width: 4px;
+  cursor: default;
+}
+
+::ng-deep svg:not(.active):not(.ctrl) path {
+  cursor: pointer;
+}
+
+::ng-deep svg text#vertexIcon {
+  font-family: sans-serif;
+  font-size: 24px;
+  fill: #00f;
+}
+
+::ng-deep svg circle {
+  fill: transparent;
+  stroke-width: 2;
+}
+::ng-deep .node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}

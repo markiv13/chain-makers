@@ -1,0 +1,50 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- c-theme name='scania' global='true'></c-theme>
+
+<c-header
+  site-name='CHAIN-MAKERS'>
+  <a slot='items'>USER</a>
+</c-header>
+
+<c-navigation>
+
+  <a slot='primary-items'>home</a>
+  <a [routerLink]="['/supply-network/network-masks']" routerLinkActive="active" class='parent' slot='primary-items' active=''>SUPPLY
+    CHAINS</a>
+  <a class='parent' slot='primary-items'>Disturbances</a>
+  <a class='parent' slot='primary-items'>Statistics</a>
+
+  <c-navigation slot='sub' caption='SUPPLY CHAINS' target='/supply-network' active=''>
+    <a [routerLink]="['/supply-network/network-masks']" routerLinkActive="active" slot='primary-items'>Mask</a>
+  </c-navigation>
+</c-navigation>
+
+<c-content>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+</c-content> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Chain Makers</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/supply-network/network-masks']" routerLinkActive="active" class='parent' slot='primary-items' active=''>SUPPLY
+          CHAINS</a>
+        <a class='parent' slot='primary-items'>Disturbances</a>
+        <a class='parent' slot='primary-items'>Statistics</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+

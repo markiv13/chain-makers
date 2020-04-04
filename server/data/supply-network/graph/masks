@@ -1,0 +1,16 @@
+{"graphName":"test",
+"restVertices":[
+{"persistenceId":33,"id":33,"title":"TRUCK-EA-BLC","actorId":33,"activityId":1,"capabilityId":33,"conditions":[],
+  "outlook":{"fx":200.0,"fy":200.0},"type":"CAPABILITY","fx":200.0,"fy":200.0},
+ {"persistenceId":1,"id":1,"title":"DEL_REG_SEU","actorId":null,"activityId":null,"capabilityId":null,"conditions":[],
+  "outlook":{"fx":200.0,"fy":200.0},"type":"DELIVERY_REGION","fx":200.0,"fy":200.0},
+ {"persistenceId":3,"id":3,"title":"BUS-EA-SBK","actorId":2,"activityId":2,"capabilityId":2,"conditions":[],
+  "outlook":{"fx":200.0,"fy":200.0},"type":"CAPABILITY","fx":200.0,"fy":200.0},
+ {"persistenceId":2,"id":2,"title":"TRUCK-EA-LB","actorId":1,"activityId":1,"capabilityId":1,"conditions":[],
+  "outlook":{"fx":200.0,"fy":200.0},"type":"CAPABILITY","fx":200.0,"fy":200.0}],
+"restEdges":[{"id":1,"source":2,"target":1,"left":true,"right":false,"conditions":[],"outputCu":0,"sourceNode":"","targetNode":"",
+    "supplyDependency":false},
+    {"id":2,"source":3,"target":1,"left":true,"right":false,"conditions":[],"outputCu":0,"sourceNode":"","targetNode":"",
+    "supplyDependency":false},
+    {"id":33,"source":33,"target":1,"left":true,"right":false,"conditions":[],"outputCu":0,"sourceNode":"","targetNode":"",
+    "supplyDependency":false}]}
