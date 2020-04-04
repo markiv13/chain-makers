@@ -9,7 +9,7 @@ import {Observable} from 'rxjs';
 })
 export class SupplyNetworkService {
 
-  baseUrl = environment.apiUrl + '/ssn';
+  baseUrl = environment.apiUrl + '/cm';
   url={
     masks:`${this.baseUrl}/graphs/masks`,
     graphs:`${this.baseUrl}/graphs`,

@@ -36,7 +36,7 @@ export class PropertyGraphDataService {
   getVertexDataInGraph(id: number): Vertex {
     // console.log(this.graphData$.getValue());//TODO: undefined when page refreshed!
     if (this.graphData$.getValue() === null) {
-      return new Vertex(0, '', 0, 0, new VertexOutlook(0, 0), 'reload');
+      return new Vertex(0, '', 0, 0, new VertexOutlook(0, 0), 'reload', 0, 0);
     }
     return this.graphData$.getValue().restVertices.find(v => v.id === id);
   }

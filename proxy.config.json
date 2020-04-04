@@ -1,6 +1,6 @@
 {
-  "/ssn/*": {
-    "target": "http://localhost:8092",
+  "/cm/*": {
+    "target": "http://localhost:8090",
     "secure": false,
     "logLevel": "debug"
   }

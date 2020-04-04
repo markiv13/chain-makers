@@ -45,7 +45,7 @@ function generateTransformAttributeEdgeLabel(e: Edge) {
 }
 
 function getVertexLabelTransformAttr(d: Vertex) {
-  return `translate(${d.outlook.fx},${d.outlook.fy + vertexCircleRadius + 15})`;
+  return `translate(${d.fx},${d.fy + vertexCircleRadius + 15})`;
 }
 
 @Component({
@@ -150,8 +150,8 @@ export class PropertyGraphComponent implements OnInit, OnDestroy, OnChanges {
         return generateSvgPathCommand(
           d3.select('#' + vertexDivIdPrefix + p.source).attr('x'),
           d3.select('#' + vertexDivIdPrefix + p.source).attr('y'),
-          d.outlook.fx,
-          d.outlook.fy);
+          d.fx,
+          d.fy);
       });
 
       incomingEdges.data().forEach((e: Edge) => d3.select('#et_' + e.source + '_' + e.target)
@@ -165,8 +165,8 @@ export class PropertyGraphComponent implements OnInit, OnDestroy, OnChanges {
       outgoingEdges.attr('d', (p: Edge) => {
 
         return generateSvgPathCommand(
-          vertex.outlook.fx,
-          vertex.outlook.fy,
+          vertex.fx,
+          vertex.fy,
           d3.select('#' + vertexDivIdPrefix + p.target).attr('x'),
           d3.select('#' + vertexDivIdPrefix + p.target).attr('y'));
       });
@@ -181,10 +181,10 @@ export class PropertyGraphComponent implements OnInit, OnDestroy, OnChanges {
 
       d3.select(this).attr('x', eventX);
       d3.select(this).attr('y', eventY);
-      vertex.outlook.fx = d3.event.x;
-      vertex.outlook.fy = d3.event.y;
+      vertex.fx = d3.event.x;
+      vertex.fy = d3.event.y;
 
-      d3.select(this).attr('transform', `translate(${vertex.outlook.fx},${vertex.outlook.fy})`);
+      d3.select(this).attr('transform', `translate(${vertex.fx},${vertex.fy})`);
 
       d3.select('#vt_' + vertex.id).attr('transform', (d: Vertex) => getVertexLabelTransformAttr(vertex));
 
@@ -291,7 +291,8 @@ export class PropertyGraphComponent implements OnInit, OnDestroy, OnChanges {
     } else if (v.type === 'DELIVERY_REGION') {
       return 'url(#DeliveryPointIcon';
     } else {
-      return 'yellow';
+      //return 'yellow';
+      return 'url(#FactoryIcon';
     }
   }
 
@@ -300,10 +301,10 @@ export class PropertyGraphComponent implements OnInit, OnDestroy, OnChanges {
       .append('svg:circle')
       .attr('id', (d) => vertexDivIdPrefix + d.id)
       .attr('r', vertexCircleRadius)
-      .attr('x', (v: Vertex) => v.outlook.fx)
-      .attr('y', (v: Vertex) => v.outlook.fy)
+      .attr('x', (v: Vertex) => v.fx)
+      .attr('y', (v: Vertex) => v.fy)
       .style('fill', (d) => this.lookupVertexIcon(d))
-      .attr('transform', (d: Vertex) => `translate(${d.outlook.fx},${d.outlook.fy})`)
+      .attr('transform', (d: Vertex) => `translate(${d.fx},${d.fy})`)
       //.on('mousedown', (d) => this.handleVertexClickEvent(d))
       .call(this.vertexDragBehaviourFunction(this.graphItemClickEmitter));
 

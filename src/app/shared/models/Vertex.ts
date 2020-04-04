@@ -7,6 +7,8 @@ export class Vertex {
     public actorId: number,
     public activityId: number,
     public outlook: VertexOutlook,
-    public type: string
+    public type: string,
+    public fx: number,
+    public fy: number
   ) {  }
 }
