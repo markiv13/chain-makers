@@ -271,28 +271,43 @@ export class PropertyGraphComponent implements OnInit, OnDestroy, OnChanges {
 
     this.svg.append('svg:defs')
       .append('svg:pattern')
-      .attr('id', 'DeliveryPointIcon')
+      .attr('id', 'MaskIcon')
       .attr('patternUnits', 'userSpaceOnUse')
-      .attr('x', 20)
-      .attr('y', 30)
+      .attr('x', 40)
+      .attr('y', 40)
       .attr('width', 80)
       .attr('height', 80)
       .attr('viewBox', '0 0 100 100')
       .append('svg:image')
-      .attr('width', 140)
-      .attr('height', 140)
-      .attr('xlink:href', 'assets/images/delivery-point-icon.jpg');
+      .attr('width', 80)
+      .attr('height', 80)
+      .attr('xlink:href', 'assets/images/n95.jpg');
+
+      this.svg.append('svg:defs')
+            .append('svg:pattern')
+            .attr('id', 'KarolinskaIcon')
+            .attr('patternUnits', 'userSpaceOnUse')
+            .attr('x', 90)
+            .attr('y', 90)
+            .attr('width', 60)
+            .attr('height', 60)
+            .attr('viewBox', '0 0 100 100')
+            .append('svg:image')
+            .attr('width', 80)
+            .attr('height', 80)
+            .attr('xlink:href', 'assets/images/hospital.png');
 
   }
 
   private lookupVertexIcon(v: Vertex) {
-    if (v.type === 'CAPABILITY') {
-      return 'url(#FactoryIcon';
-    } else if (v.type === 'DELIVERY_REGION') {
-      return 'url(#DeliveryPointIcon';
+    if (v.type === 'ACTOR') {
+      return 'yellow';
+    } else if (v.type === 'CONSUMER') {
+      return 'url(#KarolinskaIcon';
     } else {
       //return 'yellow';
-      return 'url(#FactoryIcon';
+      return 'url(#MaskIcon';
+      //return 'url(#'+v.icon+')';
     }
   }
 

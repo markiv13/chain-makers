@@ -1,6 +1,6 @@
 {
   "/cm/*": {
-    "target": "http://localhost:8090",
+    "target": "http://localhost",
     "secure": false,
     "logLevel": "debug"
   }

@@ -9,6 +9,10 @@ export class Vertex {
     public outlook: VertexOutlook,
     public type: string,
     public fx: number,
-    public fy: number
+    public fy: number,
+    public icon: string,
+    public requiredCapacity: number,
+    public availableCapacity: number,
+    public instruction: string
   ) {  }
 }

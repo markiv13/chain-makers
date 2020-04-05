@@ -24,7 +24,7 @@ function readJSONFile(path, callback) {
   readFile(localPath + path);
 }
 //*** Actor ***///
-router.get('/ssn/graphs/masks', function (req, res) {
+router.get('/cm/graphs/masks', function (req, res) {
   readJSONFile('supply-network/graph/masks', function (err, json) {
     if (err) {
       res.send(404, err);
